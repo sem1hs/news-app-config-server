@@ -11,3 +11,4 @@ spring:
           git:
             uri: https://github.com/sem1hs/news-microservices-config
             default-label: main
+            search-paths: src/main/resources
