@@ -1,0 +1,26 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: gateway
+
+  spring:
+    cloud:
+      gateway:
+        mvc:
+          routes:
+            - id: news-service
+              uri: lb://news-service
+              predicates:
+                - Path=/news/**
+
+            - id: auth-service
+              uri: lb://auth-service
+              predicates:
+                - Path=/auth/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
