@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: auth-service
+    name: news-service
 
   datasource:
     url: jdbc:postgresql://localhost:5437/newsNewsDB
